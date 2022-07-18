@@ -37,7 +37,7 @@ export default function Lists({todoData, setTodoData}) {
       }
 
   return (
-    <div>
+    <div> 
     {todoData.map((data)=>(
         <div style={getStyle(data.completed)} key={data.id}>
       <input type="checkbox" defaultChecked={false} onChange={()=> handleCompleteChange(data.id)}/>
