@@ -20,11 +20,16 @@ export default function App(){
       setValue("");
     }
 
+    const handleRemoveClick=()=>{
+      setTodoData([]);
+        }
+
   return (
       <div className="container">
         <div className="todoBlock">
           <div className="title">
             <h1>할일목록</h1>
+            <button onClick={handleRemoveClick} style={{height:"50px"}}>Delete All</button>
           </div>
          <Lists todoData={todoData} setTodoData={setTodoData} />
           <Form handleSubmit={handleSubmit} value={value} setValue={setValue}/>
